@@ -1,18 +1,17 @@
 import { Box } from "@/components/Box";
-import { Text } from "@/components/Text";
-import { useAppTheme } from "@/theme/useAppTheme";
-import { Link, useRouter } from "expo-router";
+import { Card } from "@/components/Card";
+import { cities } from "@/data/cities";
+import { CityType } from "@/types/city";
+import { FlatList, ListRenderItemInfo } from "react-native";
 
 const HomeScreen = () => {
-  const router = useRouter();
-  const { colors, spacing, textVariants } = useAppTheme();
+  const renderItem = ({ item }: ListRenderItemInfo<CityType>) => {
+    return <Card city={item} />;
+  };
 
   return (
-    <Box backgroundColor="cardPrimaryBackground">
-      <Link href={"/(protected)/event-details/4"}>Detalhes do Evento 4</Link>
-      <Text onPress={() => router.navigate("/(protected)/event-details/5")}>
-        Detalhes do Evento 5
-      </Text>
+    <Box flex={1} backgroundColor="cardPrimaryBackground">
+      <FlatList data={cities} renderItem={renderItem} />
     </Box>
   );
 };
