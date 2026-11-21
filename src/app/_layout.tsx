@@ -1,13 +1,13 @@
-import { DarkTheme, DefaultTheme, Stack, ThemeProvider } from "expo-router";
+import theme from "@/theme/theme";
+import { ThemeProvider } from "@shopify/restyle";
+import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useColorScheme } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
-  const colorScheme = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider theme={theme}>
       <Stack>
         <Stack.Screen name="(protected)" options={{ headerShown: false }} />
         <Stack.Screen name="sign-in" />
