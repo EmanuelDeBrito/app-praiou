@@ -43,6 +43,10 @@ const theme = createTheme({
   textVariants: {
     defaults: {
       color: "text",
+      fontFamily: "SpaceGroteskMedium",
+    },
+    title40: {
+      fontSize: 40,
     },
   },
   borderRadii: {
