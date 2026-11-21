@@ -1,5 +1,5 @@
-import { Box } from "@/components/Box";
 import { Card } from "@/components/Card";
+import { Container } from "@/components/Container";
 import { cities } from "@/data/cities";
 import { CityType } from "@/types/city";
 import { FlatList, ListRenderItemInfo } from "react-native";
@@ -10,9 +10,9 @@ const HomeScreen = () => {
   };
 
   return (
-    <Box flex={1} backgroundColor="cardPrimaryBackground">
+    <Container>
       <FlatList data={cities} renderItem={renderItem} />
-    </Box>
+    </Container>
   );
 };
 

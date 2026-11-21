@@ -1,41 +1,53 @@
 import { createTheme } from "@shopify/restyle";
 
 const palette = {
-  purpleLight: "#8C6FF7",
-  purplePrimary: "#5A31F4",
-  purpleDark: "#3F22AB",
-
-  greenLight: "#56DCBA",
-  greenPrimary: "#0ECD9D",
-  greenDark: "#0A906E",
-
-  black: "#0B0B0B",
-  white: "#F0F2F3",
+  white: "#FFFFFF",
+  gray: "#434343",
+  pastelYellow: "#FAEBCD",
+  lightYellow: "#FFDD67",
+  darkYellow: "#F7C873",
+  red: "FF383C",
 };
 
 const theme = createTheme({
   colors: {
-    mainBackground: palette.white,
-    cardPrimaryBackground: palette.purplePrimary,
+    background: palette.white,
+    text: palette.gray,
+    yellow1: palette.lightYellow,
+    yellow2: palette.pastelYellow,
+    yellow3: palette.darkYellow,
+    red: palette.red,
   },
   spacing: {
-    s: 8,
-    m: 16,
-    l: 24,
-    xl: 40,
+    s2: 2,
+    s4: 4,
+    s6: 6,
+    s8: 8,
+    s10: 10,
+    s12: 12,
+    s14: 14,
+    s16: 16,
+    s18: 18,
+    s20: 20,
+    s22: 22,
+    s24: 24,
+    s26: 26,
+    s28: 28,
+    s30: 30,
+    s32: 32,
+    s34: 34,
+    s36: 36,
+    s38: 38,
+    s40: 40,
   },
   textVariants: {
-    header: {
-      fontWeight: "bold",
-      fontSize: 34,
-    },
-    body: {
-      fontSize: 16,
-      lineHeight: 24,
-    },
     defaults: {
-      // We can define a default text variant here.
+      color: "text",
     },
+  },
+  borderRadii: {
+    b5: 5,
+    b10: 10,
   },
 });
 
