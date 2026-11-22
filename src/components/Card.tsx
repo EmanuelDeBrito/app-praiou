@@ -8,7 +8,7 @@ type Props = {
 
 export const Card = ({ city }: Props) => {
   return (
-    <ImageBackground source={city.image} style={{ width: 200, height: 200 }}>
+    <ImageBackground source={city.image} style={{ width: "100%", height: 220 }}>
       <Text>{city.name}</Text>
     </ImageBackground>
   );
