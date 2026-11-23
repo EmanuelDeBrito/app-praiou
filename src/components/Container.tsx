@@ -7,6 +7,7 @@ export const Container = ({
 }: PropsWithChildren & BoxProps) => {
   return (
     <Box
+      flex={1}
       paddingHorizontal="s16"
       paddingVertical="s20"
       backgroundColor="background"

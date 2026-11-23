@@ -19,7 +19,7 @@ const HomeScreen = () => {
 
   const debouncedCity = useDebounce(city);
 
-  const { cities } = useCities(debouncedCity);
+  const { citiesList } = useCities({ cityName: debouncedCity });
 
   const flatListRef = useRef(null);
   useScrollToTop(flatListRef);
@@ -29,12 +29,12 @@ const HomeScreen = () => {
   };
 
   return (
-    <Box style={{ paddingTop: top }}>
+    <Box flex={1} style={{ paddingTop: top }}>
       <Header />
       <Container>
         <FlatList
           ref={flatListRef}
-          data={cities}
+          data={citiesList}
           renderItem={renderItem}
           keyExtractor={(item) => item.id.toString()}
           showsVerticalScrollIndicator={false}

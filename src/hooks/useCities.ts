@@ -1,7 +1,17 @@
 import { cities } from "@/data/cities";
 
-export const useCities = (city: string) => {
-  console.log({ city });
+type Props = {
+  cityName?: string;
+};
 
-  return { cities };
+export const useCities = ({ cityName }: Props) => {
+  let citiesList = [...cities];
+
+  if (cityName) {
+    citiesList = citiesList.filter((city) => {
+      return city.name.toLowerCase().includes(cityName.toLowerCase());
+    });
+  }
+
+  return { citiesList };
 };
