@@ -1,4 +1,6 @@
+import { getIconByWeatherCode } from "@/utils/weatherIconMap";
 import { Box } from "./Box";
+import { Icon } from "./Icon";
 import { Text } from "./Text";
 
 type Props = {
@@ -9,7 +11,14 @@ type Props = {
 export const Climate = ({ temperature, weatherCode }: Props) => {
   return (
     <Box flexDirection={"row"} alignItems={"center"} gap="s10">
-      <Text>{weatherCode}</Text>
+      <Icon
+        name={
+          weatherCode == null
+            ? "help-outline"
+            : getIconByWeatherCode(weatherCode)
+        }
+        size={28}
+      />
       <Text variant="title20">
         {temperature === null ? "00" : temperature}º
       </Text>

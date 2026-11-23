@@ -1,4 +1,4 @@
-export async function getTemperature(latitude: number, longitude: number) {
+export const getTemperature = async (latitude: number, longitude: number) => {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code`;
 
   const response = await fetch(url);
@@ -11,4 +11,4 @@ export async function getTemperature(latitude: number, longitude: number) {
     temp: Math.round(data.current.temperature_2m),
     weatherCode: data.current.weather_code as number,
   };
-}
+};

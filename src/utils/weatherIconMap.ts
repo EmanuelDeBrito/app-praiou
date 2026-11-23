@@ -1,6 +1,6 @@
 import { IoniconsName } from "@/components/Icon";
 
-const getIconByWeatherCode = (code: number): IoniconsName => {
+export const getIconByWeatherCode = (code: number): IoniconsName => {
   if (code === 0 || code === 1) {
     return "sunny-outline";
   }
