@@ -59,6 +59,15 @@ const theme = createTheme({
       fontSize: 20,
       letterSpacing: 1,
     },
+    label: {
+      fontSize: 20,
+      fontFamily: "SpaceGroteskBold",
+      letterSpacing: 1,
+    },
+    placeholder: {
+      fontSize: 16,
+      letterSpacing: 1,
+    },
     text16: {
       fontSize: 16,
       fontFamily: "SpaceGroteskRegular",
@@ -69,6 +78,10 @@ const theme = createTheme({
     b5: 5,
     b10: 10,
     b25: 25,
+  },
+  opacity: {
+    inputBorder: "rgba(67, 67, 67, 0.1)",
+    placeholder: "rgba(67, 67, 67, 0.5)",
   },
 });
 

@@ -1,12 +1,13 @@
 import { Box } from "@/components/Box";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
-import { Header } from "@/components/Header";
+import { SearchInput } from "@/components/Search-Input";
+import { Header } from "@/containers/Header";
 import { cities } from "@/data/cities";
 import { useAppTheme } from "@/theme/useAppTheme";
 import { CityType } from "@/types/city";
 import { useScrollToTop } from "expo-router";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { FlatList, ListRenderItemInfo } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -16,6 +17,8 @@ const HomeScreen = () => {
 
   const flatListRef = useRef(null);
   useScrollToTop(flatListRef);
+
+  const [city, setCity] = useState("");
 
   const renderItem = ({ item }: ListRenderItemInfo<CityType>) => {
     return <Card city={item} />;
@@ -35,6 +38,14 @@ const HomeScreen = () => {
             gap: spacing.s20,
             paddingBottom: spacing.s65 + spacing.s65,
           }}
+          ListHeaderComponent={
+            <SearchInput
+              label="Pesquisar Cidade"
+              placeholder="Pesquise uma cidade..."
+              value={city}
+              onChangeText={setCity}
+            />
+          }
         />
       </Container>
     </Box>

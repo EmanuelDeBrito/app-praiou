@@ -1,6 +1,6 @@
-import { Avatar } from "./Avatar";
-import { Box } from "./Box";
-import { Climate } from "./Climate";
+import { Avatar } from "../components/Avatar";
+import { Box } from "../components/Box";
+import { Climate } from "../components/Climate";
 
 export const Header = () => {
   return (
