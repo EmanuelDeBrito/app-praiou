@@ -16,7 +16,8 @@ const theme = createTheme({
     yellow1: palette.lightYellow,
     yellow2: palette.pastelYellow,
     yellow3: palette.darkYellow,
-    red: palette.red,
+    error: palette.red,
+    ...palette,
   },
   spacing: {
     s2: 2,

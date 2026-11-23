@@ -29,6 +29,7 @@ const HomeScreen = () => {
           ref={flatListRef}
           data={cities}
           renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             gap: spacing.s20,
