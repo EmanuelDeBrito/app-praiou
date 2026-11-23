@@ -68,6 +68,9 @@ const theme = createTheme({
       fontSize: 16,
       letterSpacing: 1,
     },
+    pill: {
+      fontSize: 10,
+    },
     text16: {
       fontSize: 16,
       fontFamily: "SpaceGroteskRegular",
@@ -78,6 +81,7 @@ const theme = createTheme({
     b5: 5,
     b10: 10,
     b25: 25,
+    rounded: 500,
   },
   opacity: {
     inputBorder: "rgba(67, 67, 67, 0.1)",
