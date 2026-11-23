@@ -1,5 +1,5 @@
-import { Avatar } from "@/components/Avatar";
 import { Card } from "@/components/Card";
+import { Climate } from "@/components/Climate";
 import { Container } from "@/components/Container";
 import { cities } from "@/data/cities";
 import { useAppTheme } from "@/theme/useAppTheme";
@@ -20,7 +20,7 @@ const HomeScreen = () => {
 
   return (
     <Container>
-      <Avatar image="" name="Emanuel de Brito" />
+      <Climate />
       <FlatList
         ref={flatListRef}
         data={cities}

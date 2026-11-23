@@ -6,7 +6,7 @@ const palette = {
   pastelYellow: "#FAEBCD",
   lightYellow: "#FFDD67",
   darkYellow: "#F7C873",
-  red: "FF383C",
+  red: "#FF383C",
 };
 
 const theme = createTheme({
@@ -52,6 +52,10 @@ const theme = createTheme({
       fontSize: 30,
       color: "background",
       letterSpacing: 0,
+    },
+    title20: {
+      fontSize: 20,
+      letterSpacing: 1,
     },
     text16: {
       fontSize: 16,

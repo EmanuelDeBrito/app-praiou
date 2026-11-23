@@ -3,6 +3,7 @@ import { ThemeProvider } from "@shopify/restyle";
 import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -26,6 +27,7 @@ const RootLayout = () => {
         <Stack.Screen name="(protected)" options={{ headerShown: false }} />
         <Stack.Screen name="sign-in" />
       </Stack>
+      <StatusBar barStyle="dark-content" />
     </ThemeProvider>
   );
 };
