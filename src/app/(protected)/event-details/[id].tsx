@@ -1,14 +1,67 @@
+import { Box } from "@/components/Box";
+import { Card } from "@/components/Card";
+import { Container } from "@/components/Container";
+import { SearchInput } from "@/components/Search-Input";
+import { Header } from "@/containers/Header";
+import { useDebounce } from "@/hooks/useDebounce";
+import { useEvents } from "@/hooks/useEvents";
+import { useAppTheme } from "@/theme/useAppTheme";
+import { EventType } from "@/types/event";
 import { useLocalSearchParams } from "expo-router";
-import { Text, View } from "react-native";
+import { useState } from "react";
+import { FlatList, ListRenderItemInfo } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-const EventDetailsScreen = () => {
+const EventsDetailScreen = () => {
   const { id } = useLocalSearchParams();
 
+  const { spacing } = useAppTheme();
+  const { top } = useSafeAreaInsets();
+  const [event, setEvent] = useState("");
+
+  const debouncedEvent = useDebounce(event);
+
+  const { eventsList } = useEvents({
+    beachId: id as string,
+    eventName: debouncedEvent,
+  });
+
+  const renderItem = ({ item }: ListRenderItemInfo<EventType>) => {
+    return (
+      <Card
+        id={item.id}
+        name={item.name}
+        image={item.image}
+        href={`/(protected)/event-details/${item.id}`}
+        pillList={item.pillList}
+      />
+    );
+  };
+
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Id Evento: {id}</Text>
-    </View>
+    <Box flex={1} style={{ paddingTop: top }}>
+      <Header />
+      <Container>
+        <FlatList
+          data={eventsList}
+          renderItem={renderItem}
+          keyExtractor={(item) => item.id.toString()}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{
+            gap: spacing.s20,
+          }}
+          ListHeaderComponent={
+            <SearchInput
+              label="Pesquisar Praia"
+              placeholder="Pesquise uma praia..."
+              value={event}
+              onChangeText={setEvent}
+            />
+          }
+        />
+      </Container>
+    </Box>
   );
 };
 
-export default EventDetailsScreen;
+export default EventsDetailScreen;

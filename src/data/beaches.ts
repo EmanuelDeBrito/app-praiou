@@ -2,7 +2,7 @@ import { BeachType } from "@/types/beach";
 
 export const beaches: BeachType[] = [
   {
-    id: "praia-sonho",
+    id: "praia-do-sonho",
     name: "Praia do Sonho",
     image: require("./images/praia/praia-sonho.jpg"),
     cidade: "itanhaem",

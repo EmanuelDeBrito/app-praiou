@@ -6,7 +6,7 @@ import { Pill } from "./Pill";
 import { Text } from "./Text";
 
 type Props = {
-  id: string;
+  id: string | number;
   name: string;
   image: number;
   href: Href;

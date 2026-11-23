@@ -5,8 +5,10 @@ type Props = {
   eventName?: string;
 };
 
-export const useBeaches = ({ beachId, eventName }: Props) => {
+export const useEvents = ({ beachId, eventName }: Props) => {
   let eventsList = [...events];
+
+  console.log(beachId);
 
   eventsList = eventsList.filter((event) => {
     return event.praia === beachId;
