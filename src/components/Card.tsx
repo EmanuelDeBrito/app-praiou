@@ -1,5 +1,7 @@
+import { useAppTheme } from "@/theme/useAppTheme";
 import { CityType } from "@/types/city";
 import { ImageBackground } from "react-native";
+import { Box } from "./Box";
 import { Text } from "./Text";
 
 type Props = {
@@ -7,9 +9,17 @@ type Props = {
 };
 
 export const Card = ({ city }: Props) => {
+  const { borderRadii } = useAppTheme();
+
   return (
-    <ImageBackground source={city.image} style={{ width: "100%", height: 220 }}>
-      <Text>{city.name}</Text>
+    <ImageBackground
+      source={city.image}
+      style={{ width: "100%", height: 220 }}
+      imageStyle={{ borderRadius: borderRadii.b10 }}
+    >
+      <Box flex={1} justifyContent={"flex-end"} padding="s16">
+        <Text variant="title30">{city.name}</Text>
+      </Box>
     </ImageBackground>
   );
 };

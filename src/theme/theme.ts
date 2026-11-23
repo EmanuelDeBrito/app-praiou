@@ -48,6 +48,11 @@ const theme = createTheme({
     title40: {
       fontSize: 40,
     },
+    title30: {
+      fontSize: 30,
+      color: "background",
+      letterSpacing: 0,
+    },
   },
   borderRadii: {
     b5: 5,
