@@ -1,3 +1,4 @@
+import { Avatar } from "@/components/Avatar";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { cities } from "@/data/cities";
@@ -19,6 +20,7 @@ const HomeScreen = () => {
 
   return (
     <Container>
+      <Avatar image="" name="Emanuel de Brito" />
       <FlatList
         ref={flatListRef}
         data={cities}

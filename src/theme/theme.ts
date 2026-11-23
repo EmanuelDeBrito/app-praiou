@@ -53,10 +53,16 @@ const theme = createTheme({
       color: "background",
       letterSpacing: 0,
     },
+    text16: {
+      fontSize: 16,
+      fontFamily: "SpaceGroteskRegular",
+      letterSpacing: 0,
+    },
   },
   borderRadii: {
     b5: 5,
     b10: 10,
+    b25: 25,
   },
 });
 
