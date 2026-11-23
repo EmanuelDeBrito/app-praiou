@@ -4,6 +4,7 @@ import { Container } from "@/components/Container";
 import { SearchInput } from "@/components/Search-Input";
 import { Header } from "@/containers/Header";
 import { useCities } from "@/hooks/useCities";
+import { useDebounce } from "@/hooks/useDebounce";
 import { useAppTheme } from "@/theme/useAppTheme";
 import { CityType } from "@/types/city";
 import { useScrollToTop } from "expo-router";
@@ -16,7 +17,9 @@ const HomeScreen = () => {
   const { top } = useSafeAreaInsets();
   const [city, setCity] = useState("");
 
-  const { cities } = useCities(city);
+  const debouncedCity = useDebounce(city);
+
+  const { cities } = useCities(debouncedCity);
 
   const flatListRef = useRef(null);
   useScrollToTop(flatListRef);
