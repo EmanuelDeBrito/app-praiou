@@ -1,7 +1,6 @@
 import { Box } from "@/components/Box";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
-import { Icon } from "@/components/Icon";
 import { SearchInput } from "@/components/Search-Input";
 import { Header } from "@/containers/Header";
 import { useCities } from "@/hooks/useCities";
@@ -32,7 +31,6 @@ const HomeScreen = () => {
   return (
     <Box flex={1} style={{ paddingTop: top }}>
       <Header />
-      <Icon name="calendar" />
       <Container>
         <FlatList
           ref={flatListRef}

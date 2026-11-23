@@ -9,7 +9,6 @@ SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [loaded] = useFonts({
-    IcoMoon: require("../../assets/icons/icomoon.ttf"),
     SpaceGroteskLight: require("../../assets/fonts/SpaceGrotesk-Light.ttf"),
     SpaceGroteskRegular: require("../../assets/fonts/SpaceGrotesk-Regular.ttf"),
     SpaceGroteskMedium: require("../../assets/fonts/SpaceGrotesk-Medium.ttf"),

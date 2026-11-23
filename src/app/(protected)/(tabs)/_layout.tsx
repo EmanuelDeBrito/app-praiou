@@ -11,12 +11,13 @@ const TabsLayout = () => {
         headerShown: false,
         tabBarActiveTintColor: colors.text,
         tabBarStyle: {
-          height: 65,
+          height: 70,
           paddingTop: 6,
           backgroundColor: colors.yellow1,
           borderTopWidth: 0,
         },
         tabBarLabelStyle: {
+          marginTop: 5,
           fontFamily: "SpaceGroteskMedium",
           fontSize: 12,
           color: colors.text,
@@ -28,7 +29,9 @@ const TabsLayout = () => {
         options={{
           title: "Home",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"home"} color="text" />;
+            return (
+              <Icon name={focused ? "home" : "home-outline"} color="text" />
+            );
           },
         }}
       />
@@ -37,7 +40,12 @@ const TabsLayout = () => {
         options={{
           title: "Eventos",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"inbox"} color="text" />;
+            return (
+              <Icon
+                name={focused ? "file-tray" : "file-tray-outline"}
+                color="text"
+              />
+            );
           },
         }}
       />
@@ -46,7 +54,12 @@ const TabsLayout = () => {
         options={{
           title: "Criar Evento",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"plus-circle"} color="text" size={28} />;
+            return (
+              <Icon
+                name={focused ? "add-circle" : "add-circle-outline"}
+                color="text"
+              />
+            );
           },
         }}
       />
@@ -55,7 +68,9 @@ const TabsLayout = () => {
         options={{
           title: "Feed",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"users"} color="text" />;
+            return (
+              <Icon name={focused ? "people" : "people-outline"} color="text" />
+            );
           },
         }}
       />
@@ -64,7 +79,9 @@ const TabsLayout = () => {
         options={{
           title: "Perfil",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"user"} color="text" />;
+            return (
+              <Icon name={focused ? "person" : "person-outline"} color="text" />
+            );
           },
         }}
       />
