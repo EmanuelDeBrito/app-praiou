@@ -1,5 +1,7 @@
 import { useAppTheme } from "@/theme/useAppTheme";
+import { BeachType } from "@/types/beach";
 import { CityType } from "@/types/city";
+import { EventType } from "@/types/event";
 import { Link } from "expo-router";
 import { ImageBackground, Pressable } from "react-native";
 import { Box } from "./Box";
@@ -7,11 +9,10 @@ import { Pill } from "./Pill";
 import { Text } from "./Text";
 
 type Props = {
-  city: CityType;
-  info?: string[];
+  info: CityType | BeachType | EventType;
 };
 
-export const Card = ({ city, info }: Props) => {
+export const Card = ({ info }: Props) => {
   const { borderRadii } = useAppTheme();
 
   return (
