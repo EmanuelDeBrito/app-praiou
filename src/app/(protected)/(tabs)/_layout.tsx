@@ -28,7 +28,7 @@ const TabsLayout = () => {
         options={{
           title: "Home",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"fotos"} color="text" />;
+            return <Icon name={"home"} color="text" />;
           },
         }}
       />
@@ -37,7 +37,7 @@ const TabsLayout = () => {
         options={{
           title: "Eventos",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"fotos"} color="text" />;
+            return <Icon name={"inbox"} color="text" />;
           },
         }}
       />
@@ -46,7 +46,7 @@ const TabsLayout = () => {
         options={{
           title: "Criar Evento",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"fotos"} color="text" size={28} />;
+            return <Icon name={"plus-circle"} color="text" size={28} />;
           },
         }}
       />
@@ -55,7 +55,7 @@ const TabsLayout = () => {
         options={{
           title: "Feed",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"fotos"} color="text" />;
+            return <Icon name={"users"} color="text" />;
           },
         }}
       />
@@ -64,7 +64,7 @@ const TabsLayout = () => {
         options={{
           title: "Perfil",
           tabBarIcon: ({ focused }) => {
-            return <Icon name={"fotos"} color="text" />;
+            return <Icon name={"user"} color="text" />;
           },
         }}
       />
