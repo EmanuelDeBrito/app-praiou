@@ -12,7 +12,8 @@ const ProtectedLayout = () => {
       screenOptions={{ headerShown: false, fullScreenGestureEnabled: true }}
     >
       <Stack.Screen name="(tabs)" />
-      <Stack.Screen name="event-details" />
+      <Stack.Screen name="beach/[id]" />
+      <Stack.Screen name="event-details/[id]" />
     </Stack>
   );
 };
