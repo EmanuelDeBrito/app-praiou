@@ -3,7 +3,7 @@ import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
 import { SearchInput } from "@/components/Search-Input";
 import { Header } from "@/containers/Header";
-import { cities } from "@/data/cities";
+import { useCities } from "@/hooks/useCities";
 import { useAppTheme } from "@/theme/useAppTheme";
 import { CityType } from "@/types/city";
 import { useScrollToTop } from "expo-router";
@@ -14,11 +14,12 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 const HomeScreen = () => {
   const { spacing } = useAppTheme();
   const { top } = useSafeAreaInsets();
+  const [city, setCity] = useState("");
+
+  const { cities } = useCities(city);
 
   const flatListRef = useRef(null);
   useScrollToTop(flatListRef);
-
-  const [city, setCity] = useState("");
 
   const renderItem = ({ item }: ListRenderItemInfo<CityType>) => {
     return <Card city={item} />;
