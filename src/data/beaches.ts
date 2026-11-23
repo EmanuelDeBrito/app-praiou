@@ -2,21 +2,21 @@ import { BeachType } from "@/types/beach";
 
 export const beaches: BeachType[] = [
   {
-    id: "praia-grande",
-    name: "Praia Grande",
-    image: require("./images/praia-grande.jpg"),
+    id: "praia-sonho",
+    name: "Praia do Sonho",
+    image: require("./images/praia/praia-sonho.jpg"),
     cidade: "itanhaem",
   },
   {
-    id: "santos",
-    name: "Santos",
-    image: require("./images/santos.jpg"),
+    id: "centro",
+    name: "Praia do Centro",
+    image: require("./images/praia/centro.jpg"),
     cidade: "itanhaem",
   },
   {
-    id: "itanhaem",
-    name: "Itanhaém",
-    image: require("./images/itanhaem.jpg"),
+    id: "cibratel",
+    name: "Cibratel",
+    image: require("./images/praia/cibratel.jpg"),
     cidade: "itanhaem",
   },
 ];
