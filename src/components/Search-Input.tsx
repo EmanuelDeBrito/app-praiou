@@ -2,6 +2,7 @@ import { useAppTheme } from "@/theme/useAppTheme";
 import { useState } from "react";
 import { TextInput, TextInputProps } from "react-native";
 import { Box, BoxProps } from "./Box";
+import { Icon } from "./Icon";
 import { Text } from "./Text";
 
 type Props = {
@@ -24,6 +25,7 @@ export const SearchInput = ({
         {...boxStyle}
         style={{ borderColor: isFocused ? colors.text : opacity.placeholder }}
       >
+        <Icon name="search" size={24} />
         <TextInput
           placeholder={placeholder}
           placeholderTextColor={opacity.placeholder}
@@ -47,7 +49,7 @@ const boxStyle: BoxProps = {
   flex: 1,
   flexDirection: "row",
   alignItems: "center",
-  gap: "s10",
+  gap: "s14",
   paddingVertical: "s16",
   paddingHorizontal: "s10",
   borderWidth: 1.2,
