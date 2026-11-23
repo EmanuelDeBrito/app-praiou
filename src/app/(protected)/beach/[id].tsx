@@ -27,7 +27,14 @@ const BeachScreen = () => {
   });
 
   const renderItem = ({ item }: ListRenderItemInfo<BeachType>) => {
-    return <Card city={item} />;
+    return (
+      <Card
+        id={item.id}
+        name={item.name}
+        image={item.image}
+        href={`/(protected)/event-details/${item.id}`}
+      />
+    );
   };
 
   return (

@@ -25,7 +25,14 @@ const HomeScreen = () => {
   useScrollToTop(flatListRef);
 
   const renderItem = ({ item }: ListRenderItemInfo<CityType>) => {
-    return <Card city={item} />;
+    return (
+      <Card
+        id={item.id}
+        name={item.name}
+        image={item.image}
+        href={`/(protected)/beach/${item.id}`}
+      />
+    );
   };
 
   return (
