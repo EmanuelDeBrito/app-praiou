@@ -40,7 +40,6 @@ const HomeScreen = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             gap: spacing.s20,
-            paddingBottom: spacing.s65 + spacing.s65,
           }}
           ListHeaderComponent={
             <SearchInput

@@ -11,7 +11,7 @@ const TabsLayout = () => {
         headerShown: false,
         tabBarActiveTintColor: colors.text,
         tabBarStyle: {
-          height: 70,
+          height: 65,
           paddingTop: 6,
           backgroundColor: colors.yellow1,
           borderTopWidth: 0,
