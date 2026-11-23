@@ -40,6 +40,7 @@ const theme = createTheme({
     s36: 36,
     s38: 38,
     s40: 40,
+    s65: 65,
   },
   textVariants: {
     defaults: {
