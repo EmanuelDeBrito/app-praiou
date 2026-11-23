@@ -1,8 +1,25 @@
+import { getTemperature } from "@/api/weather";
+import { useEffect, useState } from "react";
 import { Avatar } from "../components/Avatar";
 import { Box } from "../components/Box";
 import { Climate } from "../components/Climate";
 
 export const Header = () => {
+  const [temperature, setTemperature] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function loadWeather() {
+      try {
+        const currentTemperature = await getTemperature(-24.1831, -46.7889);
+        setTemperature(currentTemperature);
+      } catch (error) {
+        console.log("Falha no clima: ", error);
+      }
+    }
+
+    loadWeather();
+  }, []);
+
   return (
     <Box
       flexDirection={"row"}
@@ -16,7 +33,7 @@ export const Header = () => {
     >
       <Avatar image="" name="Wally West" />
 
-      <Climate />
+      <Climate temperature={temperature} />
     </Box>
   );
 };
