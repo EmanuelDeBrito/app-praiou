@@ -6,12 +6,14 @@ import { Climate } from "../components/Climate";
 
 export const Header = () => {
   const [temperature, setTemperature] = useState<number | null>(null);
+  const [weatherCode, setWeatherCode] = useState<number | null>(null);
 
   useEffect(() => {
     async function loadWeather() {
       try {
-        const currentTemperature = await getTemperature(-24.1831, -46.7889);
-        setTemperature(currentTemperature);
+        const { temp, weatherCode } = await getTemperature(-24.1831, -46.7889);
+        setTemperature(temp);
+        setWeatherCode(weatherCode);
       } catch (error) {
         console.log("Falha no clima: ", error);
       }
@@ -33,7 +35,7 @@ export const Header = () => {
     >
       <Avatar image="" name="Wally West" />
 
-      <Climate temperature={temperature} />
+      <Climate temperature={temperature} weatherCode={weatherCode} />
     </Box>
   );
 };
