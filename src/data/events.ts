@@ -7,7 +7,7 @@ export const events: EventType[] = [
     image: require("./images/eventos/futebol.jpg"),
     description:
       "Lorem ipsum dolor sit amet consectetur. Faucibus lectus parturient ante sapien scelerisque nisi. Morbi arcu a diam elementum a faucibus tristique. Tempor pellentesque eu commodo amet aliquam bibendum viverra. Scelerisque orci a tristique lectus urna neque lorem.",
-    criador: "Wally West",
+    creator: "Wally West",
     cityName: "Itanhaém",
     beachName: "Praia do Sonho",
     date: "05/11",
@@ -24,7 +24,7 @@ export const events: EventType[] = [
     image: require("./images/eventos/volei.jpg"),
     description:
       "Lorem ipsum dolor sit amet consectetur. Faucibus lectus parturient ante sapien scelerisque nisi. Morbi arcu a diam elementum a faucibus tristique. Tempor pellentesque eu commodo amet aliquam bibendum viverra. Scelerisque orci a tristique lectus urna neque lorem.",
-    criador: "Wally West",
+    creator: "Wally West",
     cityName: "Itanhaém",
     beachName: "Praia do Sonho",
     date: "05/11",
@@ -41,7 +41,7 @@ export const events: EventType[] = [
     image: require("./images/eventos/corrida.jpg"),
     description:
       "Lorem ipsum dolor sit amet consectetur. Faucibus lectus parturient ante sapien scelerisque nisi. Morbi arcu a diam elementum a faucibus tristique. Tempor pellentesque eu commodo amet aliquam bibendum viverra. Scelerisque orci a tristique lectus urna neque lorem.",
-    criador: "Wally West",
+    creator: "Wally West",
     cityName: "Itanhaém",
     beachName: "Praia do Sonho",
     date: "05/11",

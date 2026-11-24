@@ -1,6 +1,6 @@
-import { Box } from "@/components/Box";
 import { Container } from "@/components/Container";
 import { Divider } from "@/components/Divider";
+import { EventDetailsCreator } from "@/containers/Event-Details-Creator";
 import { EventDetailsHeader } from "@/containers/Event-Details-Header";
 import { EventDetailsInfo } from "@/containers/Event-Details-Info";
 import { useEvent } from "@/hooks/useEvent";
@@ -33,9 +33,9 @@ const EventScreen = () => {
         hour={event.hour}
       />
       <EventDetailsInfo name={event.name} description={event.description} />
-      <Box paddingHorizontal="s16">
-        <Divider />
-      </Box>
+      <Divider paddingHorizontal="s16" />
+      <EventDetailsCreator creator={event.creator} />
+      <Divider paddingHorizontal="s16" />
     </Container>
   );
 };

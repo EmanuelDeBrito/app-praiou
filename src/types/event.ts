@@ -3,7 +3,7 @@ export type EventType = {
   name: string;
   image: number;
   description: string;
-  criador: string;
+  creator: string;
   cityName: string;
   beachName: string;
   date: string;

@@ -1,13 +1,9 @@
-import { Box } from "./Box";
+import { Box, BoxProps } from "./Box";
 
-export const Divider = () => {
+export const Divider = (props: BoxProps) => {
   return (
-    <Box
-      width={"100%"}
-      height={1}
-      marginVertical="s24"
-      backgroundColor="text"
-      opacity={0.2}
-    />
+    <Box marginVertical="s24" {...props}>
+      <Box width={"100%"} height={1} backgroundColor="text" opacity={0.2} />
+    </Box>
   );
 };
