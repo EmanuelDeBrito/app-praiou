@@ -21,10 +21,12 @@ export const EventInfoItem = ({
 
   return (
     <Box
+      flex={1}
+      justifyContent={"center"}
       alignItems={"center"}
       gap="s6"
       paddingVertical="s10"
-      paddingHorizontal="s12"
+      paddingHorizontal="s4"
       borderWidth={1}
       borderRadius="b5"
       style={{
@@ -32,7 +34,9 @@ export const EventInfoItem = ({
       }}
     >
       <Icon name={iconName} color={iconColor} size={iconSize} />
-      <Text variant="text12">{label}</Text>
+      <Text variant="text12" textAlign="center" numberOfLines={1}>
+        {label}
+      </Text>
     </Box>
   );
 };

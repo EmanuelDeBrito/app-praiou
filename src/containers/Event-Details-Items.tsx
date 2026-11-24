@@ -21,14 +21,17 @@ export const EventDetailsItems = ({
       flexDirection={"row"}
       justifyContent={"space-between"}
       alignItems={"center"}
-      gap="s20"
+      gap="s10"
       paddingHorizontal="s16"
     >
       <EventInfoItem iconName="business-outline" label={city} />
       <EventInfoItem iconName="location-outline" label={beach} />
       <EventInfoItem iconName="calendar-clear-outline" label={date} />
       <EventInfoItem iconName="time-outline" label={hour} />
-      <EventInfoItem iconName="person-outline" label={peopleQuantity} />
+      <EventInfoItem
+        iconName="person-outline"
+        label={peopleQuantity + " part"}
+      />
     </Box>
   );
 };
