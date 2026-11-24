@@ -32,7 +32,7 @@ const BeachScreen = () => {
         id={item.id}
         name={item.name}
         image={item.image}
-        href={`/(protected)/event-details/${item.id}`}
+        href={`/(protected)/(tabs)/events/${item.id}`}
       />
     );
   };

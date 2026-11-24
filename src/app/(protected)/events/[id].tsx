@@ -12,7 +12,7 @@ import { useState } from "react";
 import { FlatList, ListRenderItemInfo } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-const EventsDetailScreen = () => {
+const EventsScreen = () => {
   const { id } = useLocalSearchParams();
 
   const { spacing } = useAppTheme();
@@ -64,4 +64,4 @@ const EventsDetailScreen = () => {
   );
 };
 
-export default EventsDetailScreen;
+export default EventsScreen;
