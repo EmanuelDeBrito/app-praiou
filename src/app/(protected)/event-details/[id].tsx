@@ -3,6 +3,7 @@ import { Divider } from "@/components/Divider";
 import { EventDetailsCreator } from "@/containers/Event-Details-Creator";
 import { EventDetailsHeader } from "@/containers/Event-Details-Header";
 import { EventDetailsInfo } from "@/containers/Event-Details-Info";
+import { EventDetailsItems } from "@/containers/Event-Details-Items";
 import { useEvent } from "@/hooks/useEvent";
 import { useLocalSearchParams } from "expo-router";
 import { Text } from "react-native";
@@ -35,6 +36,14 @@ const EventScreen = () => {
       <EventDetailsInfo name={event.name} description={event.description} />
       <Divider paddingHorizontal="s16" />
       <EventDetailsCreator creator={event.creator} />
+      <Divider paddingHorizontal="s16" />
+      <EventDetailsItems
+        city={event.cityName}
+        beach={event.beachName}
+        date={event.date}
+        hour={event.hour}
+        peopleQuantity={event.peopleQuantity}
+      />
       <Divider paddingHorizontal="s16" />
     </Container>
   );
