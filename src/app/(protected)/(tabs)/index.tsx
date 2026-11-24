@@ -1,6 +1,7 @@
 import { Box } from "@/components/Box";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
+import { NotFound } from "@/components/Not-Found";
 import { SearchInput } from "@/components/Search-Input";
 import { Header } from "@/containers/Header";
 import { useCities } from "@/hooks/useCities";
@@ -56,6 +57,7 @@ const HomeScreen = () => {
               onChangeText={setCity}
             />
           }
+          ListEmptyComponent={<NotFound label="Nenhuma cidade encontrada..." />}
         />
       </Container>
     </Box>

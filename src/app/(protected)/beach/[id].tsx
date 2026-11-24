@@ -1,6 +1,7 @@
 import { Box } from "@/components/Box";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
+import { NotFound } from "@/components/Not-Found";
 import { SearchInput } from "@/components/Search-Input";
 import { Header } from "@/containers/Header";
 import { useBeaches } from "@/hooks/useBeaches";
@@ -32,7 +33,7 @@ const BeachScreen = () => {
         id={item.id}
         name={item.name}
         image={item.image}
-        href={`/(protected)/(tabs)/events/${item.id}`}
+        href={`/(protected)/events/${item.id}`}
       />
     );
   };
@@ -57,6 +58,7 @@ const BeachScreen = () => {
               onChangeText={setBeach}
             />
           }
+          ListEmptyComponent={<NotFound label="Nenhuma praia encontrada..." />}
         />
       </Container>
     </Box>

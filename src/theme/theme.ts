@@ -71,6 +71,10 @@ const theme = createTheme({
     pill: {
       fontSize: 10,
     },
+    notFound: {
+      fontSize: 18,
+      fontFamily: "SpaceGroteskRegular",
+    },
     text16: {
       fontSize: 16,
       fontFamily: "SpaceGroteskRegular",

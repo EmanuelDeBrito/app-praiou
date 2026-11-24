@@ -1,6 +1,7 @@
 import { Box } from "@/components/Box";
 import { Card } from "@/components/Card";
 import { Container } from "@/components/Container";
+import { NotFound } from "@/components/Not-Found";
 import { SearchInput } from "@/components/Search-Input";
 import { Header } from "@/containers/Header";
 import { useDebounce } from "@/hooks/useDebounce";
@@ -32,7 +33,7 @@ const EventsScreen = () => {
         id={item.id}
         name={item.name}
         image={item.image}
-        href={`/(protected)/event-details/${item.id}`}
+        href={`/(protected)/events/${item.id}`}
         pillList={item.pillList}
       />
     );
@@ -58,6 +59,7 @@ const EventsScreen = () => {
               onChangeText={setEvent}
             />
           }
+          ListEmptyComponent={<NotFound label="Nenhum evento encontrado..." />}
         />
       </Container>
     </Box>
