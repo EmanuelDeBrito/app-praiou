@@ -14,7 +14,7 @@ const ProtectedLayout = () => {
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="beach/[id]" />
       <Stack.Screen name="events/[id]" />
-      <Stack.Screen name="event/[id]" />
+      <Stack.Screen name="event-details/[id]" />
     </Stack>
   );
 };

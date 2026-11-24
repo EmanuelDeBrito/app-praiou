@@ -33,7 +33,7 @@ const EventsScreen = () => {
         id={item.id}
         name={item.name}
         image={item.image}
-        href={`/(protected)/event/${item.id}`}
+        href={`/(protected)/event-details/${item.id}`}
         pillList={item.pillList}
       />
     );

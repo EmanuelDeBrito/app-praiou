@@ -1,4 +1,5 @@
 import { Container } from "@/components/Container";
+import { EventDetailsHeader } from "@/containers/Event-Details-Header";
 import { useEvent } from "@/hooks/useEvent";
 import { useLocalSearchParams } from "expo-router";
 import { Text } from "react-native";
@@ -20,7 +21,7 @@ const EventScreen = () => {
 
   return (
     <Container style={{ paddingTop: top, paddingHorizontal: 0 }}>
-      <Text>{event.name}</Text>
+      <EventDetailsHeader image={event.image} />
     </Container>
   );
 };
