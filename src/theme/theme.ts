@@ -90,6 +90,9 @@ const theme = createTheme({
       fontFamily: "SpaceGroteskRegular",
       letterSpacing: 0,
     },
+    text12: {
+      fontSize: 12,
+    },
   },
   borderRadii: {
     b5: 5,
@@ -100,6 +103,7 @@ const theme = createTheme({
   opacity: {
     inputBorder: "rgba(67, 67, 67, 0.1)",
     placeholder: "rgba(67, 67, 67, 0.5)",
+    eventInfoItem: "rgba(67, 67, 67, 0.3)",
   },
 });
 
