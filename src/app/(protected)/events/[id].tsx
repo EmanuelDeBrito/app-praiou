@@ -53,8 +53,8 @@ const EventsScreen = () => {
           }}
           ListHeaderComponent={
             <SearchInput
-              label="Pesquisar Praia"
-              placeholder="Pesquise uma praia..."
+              label="Pesquisar Evento"
+              placeholder="Pesquise um evento..."
               value={event}
               onChangeText={setEvent}
             />
