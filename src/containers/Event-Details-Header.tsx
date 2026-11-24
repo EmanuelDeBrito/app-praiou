@@ -1,3 +1,4 @@
+import { BlackOpacity } from "@/components/Black-Opacity";
 import { Box } from "@/components/Box";
 import { IconButton } from "@/components/Icon-Button";
 import { router } from "expo-router";
@@ -10,13 +11,13 @@ type Props = {
 export const EventDetailsHeader = ({ image }: Props) => {
   return (
     <ImageBackground source={image} style={{ width: "100%", height: 230 }}>
+      <BlackOpacity />
       <Box
         flexDirection={"row"}
         justifyContent={"space-between"}
         alignItems={"center"}
         paddingTop="s20"
         paddingHorizontal="s16"
-        backgroundColor="error"
       >
         <IconButton iconName="arrow-back-outline" onPress={router.back} />
         <IconButton iconName="share-outline" onPress={() => {}} />
