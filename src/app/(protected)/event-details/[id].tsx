@@ -21,7 +21,14 @@ const EventScreen = () => {
 
   return (
     <Container style={{ paddingTop: top, paddingHorizontal: 0 }}>
-      <EventDetailsHeader image={event.image} />
+      <EventDetailsHeader
+        name={event.name}
+        image={event.image}
+        city={event.cityName}
+        beach={event.beachName}
+        date={event.date}
+        hour={event.hour}
+      />
     </Container>
   );
 };
