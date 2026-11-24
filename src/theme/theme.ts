@@ -20,6 +20,7 @@ const theme = createTheme({
     ...palette,
   },
   spacing: {
+    s0: 0,
     s2: 2,
     s4: 4,
     s6: 6,
