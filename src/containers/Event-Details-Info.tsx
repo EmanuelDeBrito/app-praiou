@@ -8,9 +8,9 @@ type Props = {
 
 export const EventDetailsInfo = ({ name, description }: Props) => {
   return (
-    <Box>
-      <Text>{name}</Text>
-      <Text>{description}</Text>
+    <Box paddingHorizontal="s16" marginTop="s20" gap="s6">
+      <Text variant="title25">{name}</Text>
+      <Text variant="description">{description}</Text>
     </Box>
   );
 };

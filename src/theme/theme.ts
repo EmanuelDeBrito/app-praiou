@@ -56,9 +56,18 @@ const theme = createTheme({
       color: "background",
       letterSpacing: 0,
     },
-    title20: {
-      fontSize: 20,
+    title25: {
+      fontSize: 25,
       letterSpacing: 1,
+    },
+    title20: {
+      fontSize: 25,
+      letterSpacing: 1,
+    },
+    description: {
+      fontSize: 14,
+      fontFamily: "SpaceGroteskRegular",
+      lineHeight: 20,
     },
     label: {
       fontSize: 20,

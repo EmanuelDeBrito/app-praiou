@@ -1,5 +1,6 @@
 import { Container } from "@/components/Container";
 import { EventDetailsHeader } from "@/containers/Event-Details-Header";
+import { EventDetailsInfo } from "@/containers/Event-Details-Info";
 import { useEvent } from "@/hooks/useEvent";
 import { useLocalSearchParams } from "expo-router";
 import { Text } from "react-native";
@@ -29,6 +30,7 @@ const EventScreen = () => {
         date={event.date}
         hour={event.hour}
       />
+      <EventDetailsInfo name={event.name} description={event.description} />
     </Container>
   );
 };
