@@ -7,7 +7,7 @@ import { Header } from "@/containers/Header";
 import { useDebounce } from "@/hooks/useDebounce";
 import { useEvents } from "@/hooks/useEvents";
 import { useAppTheme } from "@/theme/useAppTheme";
-import { EventType } from "@/types/event";
+import { EventPreview } from "@/types/event";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { FlatList, ListRenderItemInfo } from "react-native";
@@ -27,7 +27,7 @@ const EventsScreen = () => {
     eventName: debouncedEvent,
   });
 
-  const renderItem = ({ item }: ListRenderItemInfo<EventType>) => {
+  const renderItem = ({ item }: ListRenderItemInfo<EventPreview>) => {
     return (
       <Card
         id={item.id}
