@@ -7,8 +7,8 @@ type Props = {
 
 export const EventDetailsLocation = ({ beachId }: Props) => {
   return (
-    <Box>
-      <Text>Localização {beachId}</Text>
+    <Box gap="s10" paddingHorizontal="s16">
+      <Text variant="notFound">Localização</Text>
     </Box>
   );
 };
