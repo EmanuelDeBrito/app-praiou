@@ -4,7 +4,7 @@ type Props = {
   beachId: string;
 };
 
-export const useLocations = ({ beachId }: Props) => {
+export const useLocation = ({ beachId }: Props) => {
   let beach = beaches.find((beach) => beach.id === beachId);
 
   let latitude = beach?.latitude;
