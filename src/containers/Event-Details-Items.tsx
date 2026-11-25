@@ -24,7 +24,7 @@ export const EventDetailsItems = ({
       gap="s10"
       paddingHorizontal="s16"
     >
-      <EventInfoItem iconName="business-outline" label={city} />
+      <EventInfoItem iconName="earth-outline" label={city} />
       <EventInfoItem iconName="location-outline" label={beach} />
       <EventInfoItem iconName="calendar-clear-outline" label={date} />
       <EventInfoItem iconName="time-outline" label={hour} />

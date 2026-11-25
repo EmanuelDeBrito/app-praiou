@@ -24,7 +24,7 @@ const EventScreen = () => {
   }
 
   return (
-    <Container style={{ paddingTop: top, paddingHorizontal: 0 }}>
+    <Container style={{ paddingTop: top, paddingHorizontal: 0 }} scrollable>
       <EventDetailsHeader
         name={event.name}
         image={event.image}
