@@ -15,9 +15,14 @@ const TabsLayout = () => {
           paddingTop: 6,
           backgroundColor: colors.yellow1,
           borderTopWidth: 0,
+          elevation: 0,
+        },
+        tabBarIconStyle: {
+          height: 30,
+          width: 30,
+          marginBottom: 2,
         },
         tabBarLabelStyle: {
-          marginTop: 5,
           fontFamily: "SpaceGroteskMedium",
           fontSize: 12,
           color: colors.text,
@@ -30,7 +35,11 @@ const TabsLayout = () => {
           title: "Home",
           tabBarIcon: ({ focused }) => {
             return (
-              <Icon name={focused ? "home" : "home-outline"} color="text" />
+              <Icon
+                name={focused ? "home" : "home-outline"}
+                color="text"
+                size={28}
+              />
             );
           },
         }}
@@ -44,6 +53,7 @@ const TabsLayout = () => {
               <Icon
                 name={focused ? "file-tray" : "file-tray-outline"}
                 color="text"
+                size={28}
               />
             );
           },
@@ -58,6 +68,7 @@ const TabsLayout = () => {
               <Icon
                 name={focused ? "add-circle" : "add-circle-outline"}
                 color="text"
+                size={28}
               />
             );
           },
@@ -69,7 +80,11 @@ const TabsLayout = () => {
           title: "Feed",
           tabBarIcon: ({ focused }) => {
             return (
-              <Icon name={focused ? "people" : "people-outline"} color="text" />
+              <Icon
+                name={focused ? "people" : "people-outline"}
+                color="text"
+                size={28}
+              />
             );
           },
         }}
@@ -80,7 +95,11 @@ const TabsLayout = () => {
           title: "Perfil",
           tabBarIcon: ({ focused }) => {
             return (
-              <Icon name={focused ? "person" : "person-outline"} color="text" />
+              <Icon
+                name={focused ? "person" : "person-outline"}
+                color="text"
+                size={28}
+              />
             );
           },
         }}
