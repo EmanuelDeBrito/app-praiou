@@ -7,6 +7,7 @@ import { EventDetailsHeader } from "@/containers/Event-Details-Header";
 import { EventDetailsInfo } from "@/containers/Event-Details-Info";
 import { EventDetailsItems } from "@/containers/Event-Details-Items";
 import { EventDetailsLocation } from "@/containers/Event-Details-Location";
+import { EventDetailsOptions } from "@/containers/Event-Details-Options";
 import { useEvent } from "@/hooks/useEvent";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
@@ -57,6 +58,7 @@ const EventScreen = () => {
           <Button label="Participar" onPress={() => {}} />
         </Box>
       )}
+      {!isRegistered && <EventDetailsOptions />}
     </Container>
   );
 };
