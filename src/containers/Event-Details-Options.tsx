@@ -3,7 +3,11 @@ import { EventOptionItem } from "@/components/Event-Option-Item";
 import { useAppTheme } from "@/theme/useAppTheme";
 import { ScrollView } from "react-native";
 
-export const EventDetailsOptions = () => {
+type Props = {
+  toggleBottomSheetIsOpen: () => void;
+};
+
+export const EventDetailsOptions = ({ toggleBottomSheetIsOpen }: Props) => {
   const { spacing } = useAppTheme();
 
   return (
@@ -31,7 +35,7 @@ export const EventDetailsOptions = () => {
         <EventOptionItem
           label="Localização"
           iconName="location-outline"
-          onPress={() => {}}
+          onPress={toggleBottomSheetIsOpen}
         />
         <EventOptionItem
           label="Cancelar"
