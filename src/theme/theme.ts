@@ -64,6 +64,12 @@ const theme = createTheme({
       fontSize: 25,
       letterSpacing: 1,
     },
+    bold25: {
+      fontSize: 25,
+      color: "background",
+      fontFamily: "SpaceGroteskBold",
+      letterSpacing: 1,
+    },
     description: {
       fontSize: 14,
       fontFamily: "SpaceGroteskRegular",

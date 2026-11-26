@@ -1,3 +1,5 @@
+import { Box } from "@/components/Box";
+import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Divider } from "@/components/Divider";
 import { EventDetailsCreator } from "@/containers/Event-Details-Creator";
@@ -7,12 +9,14 @@ import { EventDetailsItems } from "@/containers/Event-Details-Items";
 import { EventDetailsLocation } from "@/containers/Event-Details-Location";
 import { useEvent } from "@/hooks/useEvent";
 import { useLocalSearchParams } from "expo-router";
+import { useState } from "react";
 import { Text } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const EventScreen = () => {
   const { id } = useLocalSearchParams();
   const { top } = useSafeAreaInsets();
+  const [isRegistered, setIsRegistered] = useState(true);
 
   const event = useEvent({ eventId: parseInt(id as string) });
 
@@ -48,6 +52,11 @@ const EventScreen = () => {
       <Divider paddingHorizontal="s16" />
       <EventDetailsLocation beachId={event.praia} />
       <Divider paddingHorizontal="s16" />
+      {isRegistered && (
+        <Box paddingHorizontal="s16">
+          <Button label="Participar" onPress={() => {}} />
+        </Box>
+      )}
     </Container>
   );
 };
