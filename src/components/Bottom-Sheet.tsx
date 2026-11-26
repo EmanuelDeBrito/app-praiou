@@ -5,6 +5,7 @@ import Animated, {
   useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
+  withDelay,
   withTiming,
 } from "react-native-reanimated";
 
@@ -30,7 +31,10 @@ export const BottomSheet = ({
 
   // Estilo animado do plano de fundo preto
   const backgroundAnimatedStyle = useAnimatedStyle(() => ({
-    zIndex: isOpen.value ? 1 : -1,
+    opacity: 1 - progress.value,
+    zIndex: isOpen.value
+      ? 1
+      : withDelay(duration, withTiming(-1, { duration: 0 })),
   }));
 
   // Estilo animado do conteúdo do bottom sheet

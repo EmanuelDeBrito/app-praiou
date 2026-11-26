@@ -36,8 +36,6 @@ const EventScreen = () => {
 
   const toggleBottomSheetIsOpen = () => {
     bottomSheetIsOpen.value = !bottomSheetIsOpen.value;
-
-    console.log(bottomSheetIsOpen.value);
   };
 
   const { latitude, longitude } = useLocation({ beachId: event.praia });
