@@ -16,7 +16,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 const EventScreen = () => {
   const { id } = useLocalSearchParams();
   const { top } = useSafeAreaInsets();
-  const [isRegistered, setIsRegistered] = useState(true);
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const event = useEvent({ eventId: parseInt(id as string) });
 

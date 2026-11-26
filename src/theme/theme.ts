@@ -96,6 +96,9 @@ const theme = createTheme({
       fontFamily: "SpaceGroteskRegular",
       letterSpacing: 0,
     },
+    text15: {
+      fontSize: 15,
+    },
     text12: {
       fontSize: 12,
     },
