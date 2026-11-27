@@ -17,6 +17,7 @@ export const events: EventType[] = [
     longitude: 333,
     pillList: ["03/11", "18:00", "6 pessoas"],
     praia: "praia-do-sonho",
+    creatorId: 1,
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ export const events: EventType[] = [
     longitude: 333,
     pillList: ["03/11", "16:00", "4 pessoas"],
     praia: "praia-do-sonho",
+    creatorId: 1,
   },
   {
     id: 3,
@@ -51,5 +53,6 @@ export const events: EventType[] = [
     longitude: 333,
     pillList: ["03/11", "14:00", "2 pessoas"],
     praia: "praia-do-sonho",
+    creatorId: 1,
   },
 ];

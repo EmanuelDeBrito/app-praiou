@@ -13,6 +13,7 @@ export type EventType = {
   longitude: number;
   pillList: string[];
   praia: string;
+  creatorId: number;
 };
 
 export type EventPreview = Pick<
