@@ -10,7 +10,8 @@ import { useAppTheme } from "@/theme/useAppTheme";
 import { CityType } from "@/types/city";
 import { useScrollToTop } from "expo-router";
 import { useRef, useState } from "react";
-import { FlatList, ListRenderItemInfo } from "react-native";
+import { ListRenderItemInfo } from "react-native";
+import Animated, { FadingTransition } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
@@ -40,8 +41,9 @@ const HomeScreen = () => {
     <Box flex={1} style={{ paddingTop: top }}>
       <Header />
       <Container>
-        <FlatList
+        <Animated.FlatList
           ref={flatListRef}
+          itemLayoutAnimation={FadingTransition.duration(400)}
           data={citiesList}
           renderItem={renderItem}
           keyExtractor={(item) => item.id.toString()}

@@ -10,7 +10,8 @@ import { useAppTheme } from "@/theme/useAppTheme";
 import { BeachType } from "@/types/beach";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
-import { FlatList, ListRenderItemInfo } from "react-native";
+import { ListRenderItemInfo } from "react-native";
+import Animated, { FadingTransition } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const BeachScreen = () => {
@@ -42,7 +43,8 @@ const BeachScreen = () => {
     <Box flex={1} style={{ paddingTop: top }}>
       <Header />
       <Container>
-        <FlatList
+        <Animated.FlatList
+          itemLayoutAnimation={FadingTransition.duration(400)}
           data={beachesList}
           renderItem={renderItem}
           keyExtractor={(item) => item.id.toString()}

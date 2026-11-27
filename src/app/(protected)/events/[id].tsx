@@ -10,14 +10,15 @@ import { useAppTheme } from "@/theme/useAppTheme";
 import { EventPreview } from "@/types/event";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
-import { FlatList, ListRenderItemInfo } from "react-native";
+import { ListRenderItemInfo } from "react-native";
+import Animated, { FadingTransition } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const EventsScreen = () => {
   const { id } = useLocalSearchParams();
 
   const { spacing } = useAppTheme();
-  const { top } = useSafeAreaInsets();
+  const { top, bottom } = useSafeAreaInsets();
   const [event, setEvent] = useState("");
 
   const debouncedEvent = useDebounce(event);
@@ -43,13 +44,15 @@ const EventsScreen = () => {
     <Box flex={1} style={{ paddingTop: top }}>
       <Header />
       <Container>
-        <FlatList
+        <Animated.FlatList
+          itemLayoutAnimation={FadingTransition.duration(400)}
           data={eventsList}
           renderItem={renderItem}
           keyExtractor={(item) => item.id.toString()}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             gap: spacing.s20,
+            paddingBottom: bottom,
           }}
           ListHeaderComponent={
             <SearchInput
