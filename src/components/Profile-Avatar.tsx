@@ -13,7 +13,7 @@ export const ProfileAvatar = ({ avatar, name, email }: Props) => {
   const { borderRadii } = useAppTheme();
 
   return (
-    <Box alignItems={"center"} gap="s14">
+    <Box alignItems={"center"} gap="s14" style={{ marginTop: -80 }}>
       <Image
         style={{ width: 160, height: 160, borderRadius: borderRadii.rounded }}
         source={avatar}
