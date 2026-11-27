@@ -19,7 +19,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const EventScreen = () => {
   const { id } = useLocalSearchParams();
-  const { top } = useSafeAreaInsets();
+  const { top, bottom } = useSafeAreaInsets();
   const [isRegistered, setIsRegistered] = useState(false);
   const bottomSheetIsOpen = useSharedValue(false);
 
@@ -65,7 +65,7 @@ const EventScreen = () => {
         <EventDetailsLocation beachId={event.praia} />
         <Divider paddingHorizontal="s16" />
         {isRegistered && (
-          <Box paddingHorizontal="s16">
+          <Box paddingHorizontal="s16" style={{ paddingBottom: bottom }}>
             <Button label="Participar" onPress={() => {}} />
           </Box>
         )}

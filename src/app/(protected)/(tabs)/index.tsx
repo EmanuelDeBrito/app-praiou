@@ -15,7 +15,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
   const { spacing } = useAppTheme();
-  const { top } = useSafeAreaInsets();
+  const { top, bottom } = useSafeAreaInsets();
   const [city, setCity] = useState("");
 
   const debouncedCity = useDebounce(city);
@@ -48,6 +48,7 @@ const HomeScreen = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             gap: spacing.s20,
+            paddingBottom: bottom,
           }}
           ListHeaderComponent={
             <SearchInput

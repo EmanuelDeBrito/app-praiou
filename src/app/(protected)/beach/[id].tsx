@@ -17,7 +17,7 @@ const BeachScreen = () => {
   const { id } = useLocalSearchParams();
 
   const { spacing } = useAppTheme();
-  const { top } = useSafeAreaInsets();
+  const { top, bottom } = useSafeAreaInsets();
   const [beach, setBeach] = useState("");
 
   const debouncedBeach = useDebounce(beach);
@@ -49,6 +49,7 @@ const BeachScreen = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             gap: spacing.s20,
+            paddingBottom: bottom,
           }}
           ListHeaderComponent={
             <SearchInput

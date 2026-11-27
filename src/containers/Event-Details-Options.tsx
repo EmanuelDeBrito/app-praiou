@@ -2,6 +2,7 @@ import { Box } from "@/components/Box";
 import { EventOptionItem } from "@/components/Event-Option-Item";
 import { useAppTheme } from "@/theme/useAppTheme";
 import { ScrollView } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 type Props = {
   toggleBottomSheetIsOpen: () => void;
@@ -9,9 +10,10 @@ type Props = {
 
 export const EventDetailsOptions = ({ toggleBottomSheetIsOpen }: Props) => {
   const { spacing } = useAppTheme();
+  const { bottom } = useSafeAreaInsets();
 
   return (
-    <Box paddingHorizontal="s16" paddingBottom="s20">
+    <Box paddingHorizontal="s16" style={{ paddingBottom: bottom }}>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
