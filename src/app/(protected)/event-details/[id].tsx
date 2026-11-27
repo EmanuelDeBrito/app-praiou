@@ -1,8 +1,8 @@
-import { BottomSheet } from "@/components/Bottom-Sheet";
 import { Box } from "@/components/Box";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Divider } from "@/components/Divider";
+import { BottomSheetLocation } from "@/containers/Bottom-Sheet-Location";
 import { EventDetailsCreator } from "@/containers/Event-Details-Creator";
 import { EventDetailsHeader } from "@/containers/Event-Details-Header";
 import { EventDetailsInfo } from "@/containers/Event-Details-Info";
@@ -14,7 +14,6 @@ import { useLocation } from "@/hooks/useLocation";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import { Text } from "react-native";
-import MapView from "react-native-maps";
 import { useSharedValue } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -76,25 +75,12 @@ const EventScreen = () => {
           />
         )}
       </Container>
-      <BottomSheet isOpen={bottomSheetIsOpen} onPress={toggleBottomSheetIsOpen}>
-        <Box
-          width={"100%"}
-          height={500}
-          borderTopLeftRadius="b25"
-          borderTopRightRadius="b25"
-          overflow={"hidden"}
-        >
-          <MapView
-            style={{ flex: 1 }}
-            initialRegion={{
-              latitude: latitude as number,
-              longitude: longitude as number,
-              latitudeDelta: 0.01,
-              longitudeDelta: 0.01,
-            }}
-          />
-        </Box>
-      </BottomSheet>
+      <BottomSheetLocation
+        latitude={latitude as number}
+        longitude={longitude as number}
+        bottomSheetIsOpen={bottomSheetIsOpen}
+        toggleBottomSheetIsOpen={toggleBottomSheetIsOpen}
+      />
     </>
   );
 };
