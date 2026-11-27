@@ -1,3 +1,4 @@
+import { Box } from "@/components/Box";
 import { Container } from "@/components/Container";
 import { Tabs } from "@/components/Tabs";
 import { useState } from "react";
@@ -15,6 +16,7 @@ const EventsScreen = () => {
         secondTabLabel="Minhas Inscrições"
         onPress={setTabSelected}
       />
+      <Box></Box>
     </Container>
   );
 };
