@@ -1,4 +1,5 @@
 import { getTemperature } from "@/api/weather";
+import { useUser } from "@/hooks/useUser";
 import { useEffect, useState } from "react";
 import { Avatar } from "../components/Avatar";
 import { Box } from "../components/Box";
@@ -7,6 +8,12 @@ import { Climate } from "../components/Climate";
 export const Header = () => {
   const [temperature, setTemperature] = useState<number | null>(null);
   const [weatherCode, setWeatherCode] = useState<number | null>(null);
+
+  const { user } = useUser(1);
+
+  if (!user) {
+    return null;
+  }
 
   useEffect(() => {
     async function loadWeather() {
@@ -33,7 +40,7 @@ export const Header = () => {
       paddingVertical="s12"
       backgroundColor="yellow1"
     >
-      <Avatar image="" name="Wally West" />
+      <Avatar image={user.avatar} name={user.name} />
 
       <Climate temperature={temperature} weatherCode={weatherCode} />
     </Box>

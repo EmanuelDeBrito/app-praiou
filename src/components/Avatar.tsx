@@ -4,7 +4,7 @@ import { Box } from "./Box";
 import { Text } from "./Text";
 
 type Props = {
-  image: string;
+  image: number;
   name: string;
 };
 
@@ -19,7 +19,7 @@ export const Avatar = ({ image, name }: Props) => {
           height: 40,
           borderRadius: borderRadii.rounded,
         }}
-        source={require("@/data/images/avatar/avatar.jpg")}
+        source={image}
         resizeMode="cover"
       />
       <Text variant="text16">{name}</Text>
