@@ -50,8 +50,8 @@ const boxStyle: BoxProps = {
   flexDirection: "row",
   alignItems: "center",
   gap: "s14",
-  paddingVertical: "s16",
-  paddingHorizontal: "s10",
+  paddingVertical: "s14",
+  paddingHorizontal: "s12",
   borderWidth: 1.2,
   borderRadius: "b5",
 };
