@@ -13,6 +13,7 @@ export type EventType = {
   longitude: number;
   pillList: string[];
   praia: string;
+  participants: number[];
   creatorId: number;
 };
 
